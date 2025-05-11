@@ -1,0 +1,172 @@
+:root {
+  --white: #f5f5f5;
+  --black: #000;
+  --grey: #262626;
+  --light-grey: #a8a8a8;
+  --blue: #0095f6;
+}
+
+html, body {
+  scroll-behavior: smooth;
+  background-color: white;
+  font-family: "Roboto", sans-serif;
+  color: white;
+  overflow-x: hidden;
+  display: flex;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  border-right: 1px solid var(--grey);
+}
+
+/* Sidebar Links */
+.sidebar .link {
+  display: flex;
+  align-items: center;
+  padding: 0.7rem 0;
+  color: var(--white);
+  font-size: 0.8rem;
+}
+
+.sidebar .link img {
+  height: 1rem;
+  margin-right: 0.5rem;
+}
+
+.sidebar .link a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.sidebar .link a:hover {
+  text-decoration: underline;
+}
+
+/* Adjust Logo Size */
+.sidebar .logo {
+  width: 90px;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* Bottom Navbar */
+.bottom-navbar {
+  display: none;
+  border-top: 1px solid var(--grey);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 60px;
+  background-color: #000;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.bottom-link {
+  display: none;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Bottom Section */
+.bottom-section {
+  position: absolute;
+  bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+
+/* Media Queries */
+@media screen and (max-width: 900px) {
+  .sidebar {
+    width: 50px;
+  }
+
+  .sidebar .link a {
+    display: none;
+  }
+
+  .sidebar .logo {
+    display: block;
+    width: 1rem;
+    margin-bottom: 1rem;
+    margin-left: -5px;
+  }
+
+  .top-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-container {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 70vw !important;
+  }
+
+  .suggested-for-you {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .sidebar {
+    display: none;
+  }
+
+  .bottom-navbar {
+    display: flex;
+  }
+
+  .bottom-link {
+    display: flex !important;
+  }
+}
+
+/* Fix Main Content */
+.search-container {
+  margin-left: 240px;
+  width: calc(100% - 240px);
+  text-align: center;
+  padding: 50px 20px;
+}
+
+/* Reduce Search Box Size */
+.search-container input {
+  width: 250px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Adjust Search Button */
+.search-container button {
+  padding: 8px 12px;
+  background-color: var(--blue);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-container button:hover {
+  background-color: #0072d6;
+}

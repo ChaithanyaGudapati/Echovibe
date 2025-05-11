@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>ECHOVIBE</title>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./Search.css" />
+    <link
+      data-default-icon="/assets/ECHOVIBE.jpg"
+      sizes="192x192"
+      href="/assets/ECHOVIBE.jpg"
+      rel="icon"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/5b938571dd.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="sidebar">
+      <div class="top-section">
+        <img class="logo" src="./assets/ECHOVIBE.jpg" alt="Logo" />
+        <div class="link">
+          <img
+            src="./assets/home.png"
+            style="height: 1rem; margin-right: 0.5rem"
+            alt="Home"
+          />
+          <a href="http://127.0.0.1:5501/index.html">Home</a>
+        </div>
+        <div class="link">
+          <i class="fas fa-search"></i>
+          <a href="http://127.0.0.1:5501/Search.html">Search</a>
+        </div>
+        <div class="link">
+          <img
+            src="./assets/explore.png"
+            style="height: 1rem; margin-right: 0.5rem"
+            alt="Explore"
+          />
+          <a href="#">Explore</a>
+        </div>
+        <div class="link">
+          <img
+            src="./assets/reels.png"
+            style="height: 1rem; margin-right: 0.5rem"
+            alt="Reels"
+          />
+          <a href="http://127.0.0.1:5501/Reels.html">Reels</a>
+        </div>
+        <div class="link">
+          <img
+            src="./assets/messenger.png"
+            style="height: 1rem; margin-right: 0.5rem"
+            alt="Messages"
+          />
+          <a href="#">Messages</a>
+        </div>
+
+        <div class="link">
+          <img
+          src="./assets/heart11.png"
+          style="height: 1rem; margin-right: 0.5rem"
+          alt="Notifications"
+        />
+          <a href="#">Notifications</a>
+        </div>
+
+
+
+        <div class="link">
+          <img
+            src="./assets/create.png"
+            style="height: 1rem; margin-right: 0.5rem"
+            alt="Create"
+          />
+          <a href="#">Create</a>
+        </div>
+
+        
+        <div class="link">
+          <img
+            src="./assets/cart_icon.png"
+            style="height: 1rem; margin-right: 0.5rem"
+            alt="Shopping Cart"
+          />
+          <a href="http://127.0.0.1:5501/Shopping.html">Shopping</a>
+        </div>
+      </div>
+      <div class="bottom-section">
+        <div class="link">
+          <i class="fas fa-ellipsis-h"></i>
+          <a href="#">More</a>
+        </div>
+      </div>
+    </div>
+    <div class="search-container" style="text-align: center; margin: 50px; align-items: center;">
+        <h2>Search Interface</h2>
+        <input type="text" id="searchBox" placeholder="Enter search term..." style="width: 250px; padding: 10px; margin: 10px; border: 1px solid #ccc; border-radius: 5px;">
+        <button onclick="search()" style="padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">Search</button>
+      </div>
+      <script>
+        function search() {
+          let query = document.getElementById("searchBox").value;
+          if (query) {
+            alert("You searched for: " + query);
+          } else {
+            alert("Search box is empty!");
+          }
+        }
+      </script>
+    </body>
+  </html>
+  
